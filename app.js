@@ -31,14 +31,20 @@ async function initialize() {
             });
 
             const res = await response.json();
+            alert(json.stringify(res));
+            alert(res.team + ' - ' + currentTeam);
+
             if (res.team === currentTeam) {
+                alert(1);
                 if (res.innerteam) {
+                alert(2);
                     innerTeam = res.innerteam;
                     document.querySelector(".main-links").remove();
                     fetchLatestNotifications();
                     showSelection();
                 }
             } else {
+                alert(3);                
                 document.querySelector(".main-links").remove();
                 document.querySelector(".notification-list").remove();
                 document.querySelector(".errors").classList.add("active");
@@ -50,6 +56,7 @@ async function initialize() {
 
             // return true;
         } else {
+                alert(4);
             showSelection();
         }
         // else {
