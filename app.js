@@ -31,7 +31,7 @@ async function initialize() {
             });
 
             const res = await response.json();
-            alert(json.stringify(res));
+            alert(JSON.stringify(res));
             alert(res.team + ' - ' + currentTeam);
 
             if (res.team === currentTeam) {
