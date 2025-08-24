@@ -21,7 +21,7 @@ async function initialize() {
 
         if (subscription) {
             // console.log("✅ User is already subscribed:", subscription);
-            alert(JSON.stringify(subscription));
+            // alert(JSON.stringify(subscription));
             const response = await fetch(`${baseURL}/getmysubscribtion`, {
                 method: 'POST',
                 body: JSON.stringify(subscription),
@@ -31,20 +31,20 @@ async function initialize() {
             });
 
             const res = await response.json();
-            alert(JSON.stringify(res));//{success: false}
-            alert(res.team + ' - ' + currentTeam);
+            // alert(JSON.stringify(res));//{success: false}
+            // alert(res.team + ' - ' + currentTeam);
 
             if (res.team === currentTeam) {
-                alert(1);
+                // alert(1);
                 if (res.innerteam) {
-                alert(2);
+                // alert(2);
                     innerTeam = res.innerteam;
                     document.querySelector(".main-links").remove();
                     fetchLatestNotifications();
                     showSelection();
                 }
             } else {
-                alert(3);                
+                // alert(3);                
                 document.querySelector(".main-links").remove();
                 document.querySelector(".notification-list").remove();
                 document.querySelector(".errors").classList.add("active");
@@ -56,7 +56,7 @@ async function initialize() {
 
             // return true;
         } else {
-                alert(4);
+                // alert(4);
             showSelection();
         }
         // else {
