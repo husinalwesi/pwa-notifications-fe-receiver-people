@@ -21,7 +21,7 @@ async function initialize() {
 
         if (subscription) {
             // console.log("✅ User is already subscribed:", subscription);
-
+            alert(JSON.stringify(subscription));
             const response = await fetch(`${baseURL}/getmysubscribtion`, {
                 method: 'POST',
                 body: JSON.stringify(subscription),
@@ -31,7 +31,7 @@ async function initialize() {
             });
 
             const res = await response.json();
-            alert(JSON.stringify(res));
+            alert(JSON.stringify(res));//{success: false}
             alert(res.team + ' - ' + currentTeam);
 
             if (res.team === currentTeam) {
