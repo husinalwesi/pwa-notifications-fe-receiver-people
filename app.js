@@ -9,7 +9,7 @@ var baseURL = "https://pwa-notifications-be.onrender.com";
 initialize();
 async function initialize() {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register(currentTeam === 'peopledynamics' ? 'sw-people.js' : 'sw.js')
+        navigator.serviceWorker.register('sw.js')
             .then(() => {
                 // console.log('Service Worker registered')
             });

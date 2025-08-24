@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IHorizons Notification</title>
-    <link rel="icon" type="image/x-icon" href="favicon-ihorizons.ico" />
+    <title>People Dynamics Notification</title>
+    <link rel="icon" type="image/x-icon" href="favicon-people.ico" />
     <link rel="manifest" href="manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,17 +13,15 @@
       rel="stylesheet"
     />
     <script>
-      var teams = ["ihorizons", "peopledynamics"];
-      var currentTeam = teams[0];
+      var currentTeam = "peopledynamics";
     </script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="main-container">
-      <div id="logos-container">
-        <img id="ihorizons-logo" src="ihorizons.png" />
-        <!-- <img id="peopleDynamics-logo" src="peopleDynamics.png" /> -->
+      <div id="logos-container" style="justify-content: end">
+        <img id="peopleDynamics-logo" src="peopleDynamics.png" />
       </div>
 
       <section
@@ -67,11 +65,11 @@
         <!-- Inquiry Card -->
         <button
           class="purpose-card"
-          aria-label="Select inquiry purpose"
+          aria-label="Select Inquiry purpose"
           onclick="selectPurpose('inquiry')"
         >
           <div class="card-icon">
-            <img src="./images/inquiry.svg" alt="inquiry Icon" />
+            <img src="./images/inquiry.svg" alt="Inquiry Icon" />
           </div>
           <h3 class="card-title">Inquiry</h3>
         </button>
